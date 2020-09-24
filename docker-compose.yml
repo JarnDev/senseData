@@ -2,9 +2,12 @@ version: '3.4'
 
 services:
     app:
-        build: .\frontend
-        environment:
-            SERVER: http://server:3000/
+        build:
+            context: ./frontend
+            args:
+                REACT_APP_PROTOCOL: http
+                REACT_APP_SERVER: server
+                REACT_APP_PORT: 3000
         restart: always
         ports:
             - 80:80
@@ -12,7 +15,7 @@ services:
             - frontend
 
     server:
-        build: .\backend
+        build: ./backend
         environment:
             HOST: redis_cache
             PORT: 6379

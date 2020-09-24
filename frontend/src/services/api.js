@@ -1,9 +1,11 @@
 import axios from 'axios';
 
-const server = process.env.SERVER || 'http://192.168.99.100:3000/'
+const protocol = process.env.REACT_APP_PROTOCOL  || 'http'
+const server = process.env.REACT_APP_SERVER || '3.16.40.249'
+const port = process.env.REACT_APP_PORT || 3000
 
 const api = axios.create({
-    baseURL: server,
+    baseURL: `${protocol}://${server}:${port}/`,
 })
 
 export const CancelToken = axios.CancelToken
