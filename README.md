@@ -10,12 +10,12 @@ Run command ` docker-compose down ` inside the senseData folder to stop
 
 ### INFO
 
-If your have problem with connection between react app and server, update the `/frontend/src/services/api.js` file with correct docker network IP
+The arg value at app build step, need to be the full URL with the port that server is listening. ex.: `http://IP_of_host_machine_runing_docker:port`
 
 ### If the page take long to load, its normal, thats because the backend is populating all url info with readable names, next time will be fast I`m caching most of it for an hour.
 
 
-This repo: contains frontend, backend and redis for caching everythin on docker 
+This repo: contains frontend and nginx for serving, backend and redis for caching... everything on docker 
 
 
 
