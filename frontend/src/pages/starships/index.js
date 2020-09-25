@@ -11,7 +11,7 @@ export default function Starships({history}) {
     const [starships, setStarships] = useState(null)
     const apiCancel = useMemo(() => CancelToken.source(), [])
     useEffect(() => {
-        api.get('ships',{cancelToken:apiCancel.token}).then(result => {
+        api.get('/ships',{cancelToken:apiCancel.token}).then(result => {
             setStarships(result.data.starships)
         })
         return () => {
