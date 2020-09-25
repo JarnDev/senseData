@@ -24,23 +24,13 @@ export const Link = styled(NavLink)`
     align-items:center;
     margin: 0 20px;
     user-select: none;
+    transition: all .3s;
     &.${'selected'}{
         font-weight:bolder;
-        color:${props => props.theme.pageColor};
         border-top: 3px solid red;
     }
-`;
-
-
-export const Exit = styled.span`
-    color:#A5ACB5;
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    margin: 0 10px;
-    user-select: none;
     &:hover{
-        cursor:pointer;
+        font-size:20px;
     }
 `;
 
@@ -49,3 +39,18 @@ export const Links = styled.div`
     height:100%;
 `;
 
+export const ExtLink = styled.a`
+    color:black;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    margin: 0 10px;
+    user-select: none;
+    svg{
+        transition: all .3s;
+        font-size:25px;
+        &:hover{
+            font-size:40px;
+        }
+    }
+`;

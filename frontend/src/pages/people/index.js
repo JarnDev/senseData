@@ -29,7 +29,7 @@ export default function People({history}) {
                 apiCancel.cancel('Operação Cancelada pelo usuário')
             })
         }
-    }, [page, apiCancel])
+    }, [page, apiCancel, history])
 
 
     function handleGotoSubmit(e){
