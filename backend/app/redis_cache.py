@@ -2,8 +2,8 @@
 import os
 import redis
 
-HOST = os.environ.get('HOST', '192.168.99.100')
-PORT = os.environ.get('PORT', 6379)
+HOST = os.environ.get('REDIS_HOST', '192.168.99.100')
+PORT = os.environ.get('REDIS_PORT', 6379)
 
 class SingleCache(object):
     class _Cache:
